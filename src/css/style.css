@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+:root {
+  --clr-1: #070a16;
+  --clr-2: #ffa500;
+  --clr-3: #fff;
+  --clr-4: #7c8ac1;
+  --clr-5: #ff0000;
+  --clr-6: #0086ed;
+  --clr-7: #00beed;
+  --clr-8: #000000b5;
+  /* --body-bg-clr: #fff;
+    --text-clr: #000;
+    --elements-bg-clr: #000;
+    --elements-text-clr: #fff; */
+  /* --text-clr-light: #000;
+  --bg-clr-light: #fff;
+  --text-clr-dark: #ffa500;
+  --bg-clr-dark: #070a16; */
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  user-select: none;
+  background-color: var(--clr-1);
+  color: var(--text-clr-light);
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  position: relative;
+  height: 15%;
+}
+
+header > h1 {
+  text-align: center;
+  font-size: 4vw;
+  color: var(--clr-2);
+  padding-top: .5rem;
+}
+
+.theme-changer {
+  position: absolute;
+  top: 10%;
+  right: 2%;
+}
+
+.theme-changer > .dark-theme,
+.light-theme {
+  height: 4vw;
+  width: 4vw;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 2vw;
+  transition: transform;
+  transition-duration: 0.2s;
+}
+
+.theme-changer > .dark-theme:hover,
+.light-theme:hover {
+  transform: scale(1.05);
+}
+
+main {
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote-img-btns-area {
+  border-radius: 0.8rem;
+  border: 2px solid var(--clr-4);
+  height: 90%;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.quote-area {
+    overflow: hidden;
+    position: relative;
+  height: 85%;
+  width: 95%;
+  margin: 0 auto;
+  border-radius: .4rem;
+}
+
+.quote-area>img {
+    width: 100%;
+    transition: transform;
+    transition-duration: .3s;
+}
+
+.quote-area>img:hover {
+    transform: scale(1.2);
+}
+
+.quote-text {
+    padding: 2rem;
+    border-radius: .4rem;
+    width: 70%;
+    background-color: var(--clr-8);
+    backdrop-filter: blur(.1rem);
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 1rem;
+    color: var(--clr-3);
+    font-size: 1.3vw;
+}
+
+.quote-text>.quote {
+    font-size: 2vw;
+    font-weight: 600;
+}
+
+.quote-error {
+  color: var(--clr-5);
+  font-size: 1.8vw;
+  font-weight: 600;
+}
+
+.loader {
+    height: 100%;
+    width: 100%;
+    background-color: var(--clr-1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader-inner {
+    border-radius: 50%;
+    display: block;
+    height: 6vw;
+    width: 6vw;
+    background: linear-gradient(var(--clr-2), transparent, transparent);
+    animation: rotate .5s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateZ(0deg);
+    } 100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+.loader-innermost {
+    border-radius: 50%;
+    height: 5vw;
+    width: 5vw;
+    background-color: var(--clr-1);
+}
+
+.operators {
+    width: 100%;
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+.operators > button {
+  border: none;
+  background-color: transparent;
+  color: var(--clr-4);
+  font-size: 1.2vw;
+}
+
+.new-quote-btn {
+  cursor: url("../imgs/new.png"), auto;
+}
+
+.new-quote-btn:hover {
+  color: var(--clr-5);
+  font-weight: 700;
+}
+
+.copy-clipboard-btn {
+  cursor: url("../imgs/copy.png"), auto;
+}
+
+.copy-clipboard-btn:hover {
+  color: var(--clr-2);
+  font-weight: 700;
+}
+
+.share-twitter-btn {
+  cursor: url("../imgs/twitter.png"), auto;
+}
+
+.share-twitter-btn:hover {
+  color: var(--clr-6);
+  font-weight: 700;
+}
+
+.export-btn {
+  cursor: url("../imgs/export.png"), auto;
+}
+
+.export-btn:hover {
+  color: var(--clr-7);
+  font-weight: 700;
+}
+
+footer {
+  color: var(--clr-2);
+  font-weight: 600;
+  font-size: 1vw;
+  height: 5%;
+  text-align: center;
+}

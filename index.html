@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Quote Generator</title>
+    <link type="text/css" rel="stylesheet" href="./src/css/style.css" />
+    <link type="text/css" rel="stylesheet" href="./src/css//utilities.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section class="container">
+      <header>
+        <h1>Random Quote Generator</h1>
+      </header>
+      <main>
+        <div class="quote-img-btns-area">
+            <div id="quote-export-img" class="quote-area flex-1">
+                <img class="quote-background-image" src="" alt="Random image" />
+
+                <div class="quote-text">
+                    <span class="quote"></span>
+                    <span class="author"></span>
+                    <span class="quote-error none"></span>
+                </div>
+
+                <div class="loader none">
+                    <span class="loader-inner">
+                        <span class="loader-innermost"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="operators">
+                <button class="new-quote-btn">New Quote</button>
+                <button class="copy-clipboard-btn">Copy to Clipboard</button>
+                <button class="share-twitter-btn">Share on Twitter</button>
+                <button class="export-btn">Export</button>
+            </div>
+        </div>
+      </main>
+      <footer>All Rights Reserved &trade; | ChaiCode Cohort Assignment</footer>
+    </section>
+    <script type="module" src="./src/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </body>
+</html>
